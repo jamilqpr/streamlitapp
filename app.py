@@ -10,7 +10,7 @@ col1,col2 = st.columns(2)
 
 @st.cache
 def load_data(file):
-    return pd.read_csv(file)
+    return pd.read_csv(file, encoding='utf-8')
 
 
 
