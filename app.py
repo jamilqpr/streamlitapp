@@ -10,7 +10,7 @@ col1,col2 = st.columns(2)
 
 @st.cache
 def load_data(file):
-    return pd.read_csv(file, encoding='utf-8')
+    return pd.read_csv(file)
 
 
 
@@ -171,7 +171,7 @@ def main():
     options = st.sidebar.radio('Pages',options = ['Data Analysis','Data visualization'])
 
     if file is not None:
-        data = load_data(file, encoding='utf-8')
+        data = load_data(file)
 
         if options == 'Data Analysis':
            analyze_data(data)
