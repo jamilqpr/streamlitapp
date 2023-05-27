@@ -171,7 +171,7 @@ def main():
     options = st.sidebar.radio('Pages',options = ['Data Analysis','Data visualization'])
 
     if file is not None:
-        data = load_data(file)
+        data = load_data(file, encoding='utf-8')
 
         if options == 'Data Analysis':
            analyze_data(data)
